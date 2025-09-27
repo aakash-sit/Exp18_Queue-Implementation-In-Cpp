@@ -40,19 +40,19 @@ The operations rely on modular arithmetic to handle the wrapping of indices.
 
 #### 2\. `isFull()`
 
-1.  **Check:** Return `true` if `(rear + 1) % SIZE == front`.
+1.  **Check:** Return `true` if **`(rear + 1) % SIZE == front`**.
 2.  Otherwise, return `false`.
 
 #### 3\. `isEmpty()`
 
-1.  **Check:** Return `true` if `front == -1`.
+1.  **Check:** Return `true` if **`front == -1`**.
 2.  Otherwise, return `false`.
 
 #### 4\. `enqueue(value)` (Insertion)
 
 1.  **Start.**
 2.  **Check for Overflow:** If `isFull()`, display "Overflow" and **End**.
-3.  **If `isEmpty()`:** Set `front = 0`.
+3.  **If `isEmpty()`:** Set **`front = 0`**.
 4.  Calculate new `rear`: **`rear = (rear + 1) % SIZE`**.
 5.  Insert `value` at `arr[rear]`.
 6.  **End.**
@@ -71,15 +71,15 @@ The operations rely on modular arithmetic to handle the wrapping of indices.
 
 1.  **Start.**
 2.  **Check for Empty:** If `isEmpty()`, display "Queue is empty" and **End**.
-3.  Initialize an iterator `i = front`.
-4.  **Loop:** While `i` is not equal to `(rear + 1) % SIZE`:
+3.  Initialize an iterator **`i = front`**.
+4.  **Loop:** While `i` is not equal to **`(rear + 1) % SIZE`**:
       * Print `arr[i]`.
-      * Update `i`: `i = (i + 1) % SIZE`.
+      * Update `i`: **`i = (i + 1) % SIZE`**.
 5.  **End.**
 
 -----
 
-### 🚀 Flowcharts
+### 🚀 Flowcharts (Mermaid Syntax Corrected)
 
 #### **General Circular Queue Flow**
 
@@ -119,9 +119,9 @@ graph TD
 
 Circular queues are fundamental in systems where buffering data is necessary and resources (memory) must be used efficiently.
 
-  * **Operating Systems (OS)**: Used for managing **job scheduling** and CPU time slicing (Round Robin scheduling).
+  * **Operating Systems (OS)**: Used for managing **job scheduling** (e.g., Round Robin scheduling) and task queues where fair rotation of processing is required.
   * **Networking Buffers**: Essential in routers and network interfaces to handle incoming and outgoing data packets in a fixed-size buffer, ensuring old packets are efficiently overwritten by new ones.
-  * **Traffic Management**: In real-time data streaming and event processing, they manage event queues to process items in order while controlling memory usage.
+  * **Real-Time Data**: Used in real-time data streaming and event processing to manage event queues, processing items in order while strictly controlling memory usage.
 
 -----
 
